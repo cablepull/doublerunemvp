@@ -1,0 +1,1130 @@
+{
+  "accessibility": {
+    "bounds": [
+      0.0,
+      0.0,
+      1040.0,
+      620.0
+    ],
+    "children": [
+      {
+        "bounds": [
+          0.0,
+          0.0,
+          1040.0,
+          620.0
+        ],
+        "children": [
+          {
+            "bounds": [
+              28.0,
+              28.0,
+              80.0,
+              16.3
+            ],
+            "name": "Double Rune",
+            "role": "label"
+          },
+          {
+            "bounds": [
+              124.0,
+              28.6,
+              226.0,
+              15.0
+            ],
+            "name": "MOCK INBOX / CONTROLLED BY RUNE",
+            "role": "label"
+          },
+          {
+            "bounds": [
+              28.0,
+              64.3,
+              50.0,
+              16.3
+            ],
+            "key": "inbox-count",
+            "name": "Inbox: 3",
+            "role": "label"
+          },
+          {
+            "bounds": [
+              96.0,
+              64.3,
+              58.0,
+              16.3
+            ],
+            "key": "unread-count",
+            "name": "Unread: 1",
+            "role": "label"
+          },
+          {
+            "bounds": [
+              172.0,
+              64.3,
+              71.0,
+              16.3
+            ],
+            "key": "archive-count",
+            "name": "Archived: 0",
+            "role": "label"
+          },
+          {
+            "bounds": [
+              28.0,
+              100.5,
+              320.0,
+              433.5
+            ],
+            "children": [
+              {
+                "actions": [
+                  "click",
+                  "focus"
+                ],
+                "bounds": [
+                  28.0,
+                  100.5,
+                  320.0,
+                  94.3
+                ],
+                "children": [
+                  {
+                    "bounds": [
+                      44.0,
+                      116.5,
+                      288.0,
+                      15.0
+                    ],
+                    "name": "Avery Chen",
+                    "role": "label"
+                  },
+                  {
+                    "bounds": [
+                      44.0,
+                      139.5,
+                      288.0,
+                      16.3
+                    ],
+                    "name": "Architecture review",
+                    "role": "label"
+                  },
+                  {
+                    "bounds": [
+                      44.0,
+                      163.8,
+                      288.0,
+                      15.0
+                    ],
+                    "key": "read-state-1",
+                    "name": "Unread",
+                    "role": "label"
+                  }
+                ],
+                "key": "message-1",
+                "name": "Open Architecture review",
+                "role": "button"
+              },
+              {
+                "actions": [
+                  "click",
+                  "focus"
+                ],
+                "bounds": [
+                  28.0,
+                  204.8,
+                  320.0,
+                  94.3
+                ],
+                "children": [
+                  {
+                    "bounds": [
+                      44.0,
+                      220.8,
+                      288.0,
+                      15.0
+                    ],
+                    "name": "Sam Rivera",
+                    "role": "label"
+                  },
+                  {
+                    "bounds": [
+                      44.0,
+                      243.8,
+                      288.0,
+                      16.3
+                    ],
+                    "name": "Friday demo",
+                    "role": "label"
+                  },
+                  {
+                    "bounds": [
+                      44.0,
+                      268.0,
+                      288.0,
+                      15.0
+                    ],
+                    "key": "read-state-2",
+                    "name": "Read",
+                    "role": "label"
+                  }
+                ],
+                "key": "message-2",
+                "name": "Open Friday demo",
+                "role": "button"
+              },
+              {
+                "actions": [
+                  "click",
+                  "focus"
+                ],
+                "bounds": [
+                  28.0,
+                  309.0,
+                  320.0,
+                  94.3
+                ],
+                "children": [
+                  {
+                    "bounds": [
+                      44.0,
+                      325.0,
+                      288.0,
+                      15.0
+                    ],
+                    "name": "Morgan Lee",
+                    "role": "label"
+                  },
+                  {
+                    "bounds": [
+                      44.0,
+                      348.0,
+                      288.0,
+                      16.3
+                    ],
+                    "name": "Build receipt",
+                    "role": "label"
+                  },
+                  {
+                    "bounds": [
+                      44.0,
+                      372.3,
+                      288.0,
+                      15.0
+                    ],
+                    "key": "read-state-3",
+                    "name": "Read",
+                    "role": "label"
+                  }
+                ],
+                "key": "message-3",
+                "name": "Open Build receipt",
+                "role": "button"
+              }
+            ],
+            "key": "message-list",
+            "role": "group"
+          },
+          {
+            "bounds": [
+              368.0,
+              100.5,
+              644.0,
+              433.5
+            ],
+            "children": [
+              {
+                "bounds": [
+                  392.0,
+                  124.5,
+                  596.0,
+                  16.3
+                ],
+                "key": "selected-subject",
+                "name": "Friday demo",
+                "role": "label"
+              },
+              {
+                "bounds": [
+                  392.0,
+                  158.8,
+                  596.0,
+                  15.0
+                ],
+                "name": "From Sam Rivera",
+                "role": "label"
+              },
+              {
+                "bounds": [
+                  392.0,
+                  191.8,
+                  596.0,
+                  16.3
+                ],
+                "name": "Show the controller selecting, reading and archiving a message.",
+                "role": "label"
+              },
+              {
+                "actions": [
+                  "click",
+                  "focus"
+                ],
+                "bounds": [
+                  392.0,
+                  226.0,
+                  91.0,
+                  38.0
+                ],
+                "children": [
+                  {
+                    "bounds": [
+                      408.0,
+                      237.5,
+                      59.0,
+                      15.0
+                    ],
+                    "name": "Mark read",
+                    "role": "label"
+                  }
+                ],
+                "key": "mark-read",
+                "name": "Mark read",
+                "role": "button",
+                "states": [
+                  "focused"
+                ]
+              },
+              {
+                "actions": [
+                  "click",
+                  "focus"
+                ],
+                "bounds": [
+                  493.0,
+                  226.0,
+                  76.0,
+                  38.0
+                ],
+                "children": [
+                  {
+                    "bounds": [
+                      509.0,
+                      237.5,
+                      44.0,
+                      15.0
+                    ],
+                    "name": "Archive",
+                    "role": "label"
+                  }
+                ],
+                "key": "archive",
+                "name": "Archive",
+                "role": "button"
+              }
+            ],
+            "key": "detail",
+            "role": "group"
+          },
+          {
+            "bounds": [
+              28.0,
+              565.5,
+              856.0,
+              15.0
+            ],
+            "key": "status",
+            "name": "Marked message 2 read",
+            "role": "label"
+          },
+          {
+            "actions": [
+              "click",
+              "focus"
+            ],
+            "bounds": [
+              900.0,
+              554.0,
+              112.0,
+              38.0
+            ],
+            "children": [
+              {
+                "bounds": [
+                  916.0,
+                  565.5,
+                  80.0,
+                  15.0
+                ],
+                "name": "Reset fixtures",
+                "role": "label"
+              }
+            ],
+            "key": "reset",
+            "name": "Reset fixtures",
+            "role": "button"
+          }
+        ],
+        "key": "inbox",
+        "role": "group"
+      },
+      {
+        "bounds": [
+          0.0,
+          0.0,
+          1.0,
+          1.0
+        ],
+        "role": "status",
+        "states": [
+          "live-polite"
+        ]
+      }
+    ],
+    "name": "Double Rune — Inbox MVP",
+    "role": "window"
+  },
+  "anim_t": 2.799999999999995,
+  "animating": false,
+  "dark_system": true,
+  "elements": [
+    {
+      "blur": 0.0,
+      "fill": "#121314ff",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "key": "inbox",
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox",
+      "rect": [
+        0.0,
+        0.0,
+        1040.0,
+        620.0
+      ],
+      "role": "group",
+      "scale": 1.0
+    },
+    {
+      "blur": 0.0,
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#0",
+      "rect": [
+        28.0,
+        28.0,
+        984.0,
+        16.25
+      ],
+      "role": "group",
+      "scale": 1.0
+    },
+    {
+      "blur": 0.0,
+      "color": "#eff0f2ff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#0/#0",
+      "rect": [
+        28.0,
+        28.0,
+        80.0,
+        16.25
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Double Rune"
+    },
+    {
+      "blur": 0.0,
+      "color": "#a2a5aaff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#0/#1",
+      "rect": [
+        124.0,
+        28.63,
+        226.0,
+        15.0
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "MOCK INBOX / CONTROLLED BY RUNE"
+    },
+    {
+      "blur": 0.0,
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#1",
+      "rect": [
+        28.0,
+        64.25,
+        984.0,
+        16.25
+      ],
+      "role": "group",
+      "scale": 1.0
+    },
+    {
+      "blur": 0.0,
+      "color": "#eff0f2ff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "key": "inbox-count",
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#1/inbox-count",
+      "rect": [
+        28.0,
+        64.25,
+        50.0,
+        16.25
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Inbox: 3"
+    },
+    {
+      "blur": 0.0,
+      "color": "#eff0f2ff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "key": "unread-count",
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#1/unread-count",
+      "rect": [
+        96.0,
+        64.25,
+        58.0,
+        16.25
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Unread: 1"
+    },
+    {
+      "blur": 0.0,
+      "color": "#eff0f2ff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "key": "archive-count",
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#1/archive-count",
+      "rect": [
+        172.0,
+        64.25,
+        71.0,
+        16.25
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Archived: 0"
+    },
+    {
+      "blur": 0.0,
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2",
+      "rect": [
+        28.0,
+        100.5,
+        984.0,
+        433.5
+      ],
+      "role": "group",
+      "scale": 1.0
+    },
+    {
+      "blur": 0.0,
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "key": "message-list",
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/message-list",
+      "rect": [
+        28.0,
+        100.5,
+        320.0,
+        433.5
+      ],
+      "role": "group",
+      "scale": 1.0
+    },
+    {
+      "blur": 0.0,
+      "fill": "#1c1d20ff",
+      "focusVisible": false,
+      "focusable": true,
+      "focused": false,
+      "inert": false,
+      "key": "message-1",
+      "label": "Open Architecture review",
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/message-list/message-1",
+      "rect": [
+        28.0,
+        100.5,
+        320.0,
+        94.25
+      ],
+      "role": "button",
+      "scale": 1.0
+    },
+    {
+      "blur": 0.0,
+      "color": "#a2a5aaff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/message-list/message-1/#0",
+      "rect": [
+        44.0,
+        116.5,
+        288.0,
+        15.0
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Avery Chen"
+    },
+    {
+      "blur": 0.0,
+      "color": "#eff0f2ff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/message-list/message-1/#1",
+      "rect": [
+        44.0,
+        139.5,
+        288.0,
+        16.25
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Architecture review"
+    },
+    {
+      "blur": 0.0,
+      "color": "#a2a5aaff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "key": "read-state-1",
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/message-list/message-1/read-state-1",
+      "rect": [
+        44.0,
+        163.75,
+        288.0,
+        15.0
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Unread"
+    },
+    {
+      "blur": 0.0,
+      "fill": "#ffffff16",
+      "focusVisible": false,
+      "focusable": true,
+      "focused": false,
+      "inert": false,
+      "key": "message-2",
+      "label": "Open Friday demo",
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/message-list/message-2",
+      "rect": [
+        28.0,
+        204.75,
+        320.0,
+        94.25
+      ],
+      "role": "button",
+      "scale": 1.0
+    },
+    {
+      "blur": 0.0,
+      "color": "#a2a5aaff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/message-list/message-2/#0",
+      "rect": [
+        44.0,
+        220.75,
+        288.0,
+        15.0
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Sam Rivera"
+    },
+    {
+      "blur": 0.0,
+      "color": "#eff0f2ff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/message-list/message-2/#1",
+      "rect": [
+        44.0,
+        243.75,
+        288.0,
+        16.25
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Friday demo"
+    },
+    {
+      "blur": 0.0,
+      "color": "#a2a5aaff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "key": "read-state-2",
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/message-list/message-2/read-state-2",
+      "rect": [
+        44.0,
+        268.0,
+        288.0,
+        15.0
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Read"
+    },
+    {
+      "blur": 0.0,
+      "fill": "#1c1d20ff",
+      "focusVisible": false,
+      "focusable": true,
+      "focused": false,
+      "inert": false,
+      "key": "message-3",
+      "label": "Open Build receipt",
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/message-list/message-3",
+      "rect": [
+        28.0,
+        309.0,
+        320.0,
+        94.25
+      ],
+      "role": "button",
+      "scale": 1.0
+    },
+    {
+      "blur": 0.0,
+      "color": "#a2a5aaff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/message-list/message-3/#0",
+      "rect": [
+        44.0,
+        325.0,
+        288.0,
+        15.0
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Morgan Lee"
+    },
+    {
+      "blur": 0.0,
+      "color": "#eff0f2ff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/message-list/message-3/#1",
+      "rect": [
+        44.0,
+        348.0,
+        288.0,
+        16.25
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Build receipt"
+    },
+    {
+      "blur": 0.0,
+      "color": "#a2a5aaff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "key": "read-state-3",
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/message-list/message-3/read-state-3",
+      "rect": [
+        44.0,
+        372.25,
+        288.0,
+        15.0
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Read"
+    },
+    {
+      "blur": 0.0,
+      "fill": "#1c1d20ff",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "key": "detail",
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/detail",
+      "rect": [
+        368.0,
+        100.5,
+        644.0,
+        433.5
+      ],
+      "role": "group",
+      "scale": 1.0
+    },
+    {
+      "blur": 0.0,
+      "color": "#eff0f2ff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "key": "selected-subject",
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/detail/selected-subject",
+      "rect": [
+        392.0,
+        124.5,
+        596.0,
+        16.25
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Friday demo"
+    },
+    {
+      "blur": 0.0,
+      "color": "#a2a5aaff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/detail/#1",
+      "rect": [
+        392.0,
+        158.75,
+        596.0,
+        15.0
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "From Sam Rivera"
+    },
+    {
+      "blur": 0.0,
+      "color": "#eff0f2ff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/detail/#2",
+      "rect": [
+        392.0,
+        191.75,
+        596.0,
+        16.25
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Show the controller selecting, reading and archiving a message."
+    },
+    {
+      "blur": 0.0,
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/detail/#3",
+      "rect": [
+        392.0,
+        226.0,
+        596.0,
+        38.0
+      ],
+      "role": "group",
+      "scale": 1.0
+    },
+    {
+      "blur": 0.0,
+      "fill": "#ffffff16",
+      "focusVisible": false,
+      "focusable": true,
+      "focused": true,
+      "inert": false,
+      "key": "mark-read",
+      "label": "Mark read",
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/detail/#3/mark-read",
+      "rect": [
+        392.0,
+        226.0,
+        91.0,
+        38.0
+      ],
+      "role": "button",
+      "scale": 1.0
+    },
+    {
+      "blur": 0.0,
+      "color": "#eff0f2ff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/detail/#3/mark-read/#0",
+      "rect": [
+        408.0,
+        237.5,
+        59.0,
+        15.0
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Mark read"
+    },
+    {
+      "blur": 0.0,
+      "fill": "#ffffff16",
+      "focusVisible": false,
+      "focusable": true,
+      "focused": false,
+      "inert": false,
+      "key": "archive",
+      "label": "Archive",
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/detail/#3/archive",
+      "rect": [
+        493.0,
+        226.0,
+        76.0,
+        38.0
+      ],
+      "role": "button",
+      "scale": 1.0
+    },
+    {
+      "blur": 0.0,
+      "color": "#eff0f2ff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#2/detail/#3/archive/#0",
+      "rect": [
+        509.0,
+        237.5,
+        44.0,
+        15.0
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Archive"
+    },
+    {
+      "blur": 0.0,
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#3",
+      "rect": [
+        28.0,
+        554.0,
+        984.0,
+        38.0
+      ],
+      "role": "group",
+      "scale": 1.0
+    },
+    {
+      "blur": 0.0,
+      "color": "#a2a5aaff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "key": "status",
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#3/status",
+      "rect": [
+        28.0,
+        565.5,
+        856.0,
+        15.0
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Marked message 2 read"
+    },
+    {
+      "blur": 0.0,
+      "fill": "#ffffff16",
+      "focusVisible": false,
+      "focusable": true,
+      "focused": false,
+      "inert": false,
+      "key": "reset",
+      "label": "Reset fixtures",
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#3/reset",
+      "rect": [
+        900.0,
+        554.0,
+        112.0,
+        38.0
+      ],
+      "role": "button",
+      "scale": 1.0
+    },
+    {
+      "blur": 0.0,
+      "color": "#eff0f2ff",
+      "fill": "#00000000",
+      "focusVisible": false,
+      "focusable": false,
+      "focused": false,
+      "inert": false,
+      "loopPhase": null,
+      "opacity": 1.0,
+      "path": "inbox/#3/reset/#0",
+      "rect": [
+        916.0,
+        565.5,
+        80.0,
+        15.0
+      ],
+      "role": "text",
+      "scale": 1.0,
+      "text": "Reset fixtures"
+    }
+  ],
+  "reduced_motion": false,
+  "scale": 1.0,
+  "t": 2.8,
+  "time_scale": 1.0,
+  "title": "Double Rune — Inbox MVP",
+  "viewport": [
+    1040.0,
+    620.0
+  ],
+  "warnings": []
+}

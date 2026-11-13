@@ -1,0 +1,97 @@
+{
+  "schema": "double-rune.scenario/1",
+  "name": "archive-selected-message",
+  "initial": [
+    {
+      "kind": "text",
+      "key": "inbox-count",
+      "value": "Inbox: 3"
+    },
+    {
+      "kind": "text",
+      "key": "unread-count",
+      "value": "Unread: 2"
+    },
+    {
+      "kind": "present",
+      "key": "message-1"
+    },
+    {
+      "kind": "present",
+      "key": "message-2"
+    },
+    {
+      "kind": "present",
+      "key": "message-3"
+    }
+  ],
+  "steps": [
+    {
+      "tap": "message-2",
+      "expect": [
+        {
+          "kind": "text",
+          "key": "selected-subject",
+          "value": "Friday demo"
+        },
+        {
+          "kind": "text",
+          "key": "status",
+          "value": "Selected message 2"
+        }
+      ]
+    },
+    {
+      "tap": "mark-read",
+      "expect": [
+        {
+          "kind": "text",
+          "key": "unread-count",
+          "value": "Unread: 1"
+        },
+        {
+          "kind": "text",
+          "key": "read-state-2",
+          "value": "Read"
+        },
+        {
+          "kind": "text",
+          "key": "read-state-1",
+          "value": "Unread"
+        }
+      ]
+    },
+    {
+      "tap": "archive",
+      "expect": [
+        {
+          "kind": "absent",
+          "key": "message-2"
+        },
+        {
+          "kind": "present",
+          "key": "message-1"
+        },
+        {
+          "kind": "present",
+          "key": "message-3"
+        },
+        {
+          "kind": "text",
+          "key": "inbox-count",
+          "value": "Inbox: 2"
+        },
+        {
+          "kind": "text",
+          "key": "archive-count",
+          "value": "Archived: 1"
+        },
+        {
+          "kind": "text",
+          "key": "status",
+          "value": "Archived message 2"
+        }
+      ]
+    }
+  ]
+}

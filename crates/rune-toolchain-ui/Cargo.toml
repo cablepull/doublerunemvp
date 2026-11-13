@@ -1,0 +1,12 @@
+[package]
+name = "rune-toolchain-ui"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+[dependencies]
+rune-core.workspace = true
+rune-cargo.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+[dev-dependencies]
+tempfile = "3"

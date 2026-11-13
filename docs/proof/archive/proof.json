@@ -1,0 +1,41 @@
+{
+  "schema": "double-rune.ui-proof/1",
+  "status": "passed",
+  "plan_id": "f849273b71853935e830b33250e9cabd62fed1da90723b0c5e52a3192b21e641",
+  "artifact_sha256": "f277ff3cbec750b4f028215f87c090a503161b2123b59905a8d292b09e867bda",
+  "scenario_sha256": "8dd24fa9cd0cbcf56ed571c3dec7b183c12cb3c0fd4b0f27913ff02de145194d",
+  "mode": "headless-prefix-replay",
+  "model_calls": 0,
+  "observations": [
+    {
+      "index": 0,
+      "action": null,
+      "tree_sha256": "f62b11c96a33a5cf3f21de66b54e44850884ccf03fcc235f57d58625f6d12281",
+      "png_sha256": "5659dcd88a272648f071f1646288062af277b6c17a438b6c30c1f0986881a6ca",
+      "assertions": 5
+    },
+    {
+      "index": 1,
+      "action": "message-2",
+      "tree_sha256": "71924655de3509f4ebd9194896d43bd6ad0047c86fc0a7972daf4decfbe4acb5",
+      "png_sha256": "7eb2d6730e8a5f456e3b271f376123cd90965fba06b17edd2fd3ad4e7916ea4f",
+      "assertions": 2
+    },
+    {
+      "index": 2,
+      "action": "mark-read",
+      "tree_sha256": "1a906c36e1f844968d42d7f9ba17252aeecf35b471aa144b73203c543d2ac803",
+      "png_sha256": "06114480e49a34184877372e1fa41db9cb4d126718058802e5fc8779890cae86",
+      "assertions": 3
+    },
+    {
+      "index": 3,
+      "action": "archive",
+      "tree_sha256": "10abc3cd33775e38b30d13671c688d74d43944af0e465ebbffce2991c22654b3",
+      "png_sha256": "30338d3dde9f47e9dcf31d732e037277a73400bdfdc638a082b0e32fc7994ce9",
+      "assertions": 6
+    }
+  ],
+  "evidence_dir": ".rune/ui/archive-selected-message-509-1794555687301405581",
+  "failure": null
+}

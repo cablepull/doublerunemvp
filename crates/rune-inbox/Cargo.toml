@@ -1,0 +1,11 @@
+[package]
+name = "rune-inbox"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[dependencies]
+rune = { path = "../../vendor/anomaly-rune/crates/rune", default-features = false, features = ["embedded-fonts", "tooling"] }
+
+[lib]
+name = "rune_inbox"
