@@ -1,0 +1,3 @@
+[submodule "vendor/anomaly-rune"]
+	path = vendor/anomaly-rune
+	url = https://github.com/anomalyco/rune.git

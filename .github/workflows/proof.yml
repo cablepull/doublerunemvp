@@ -1,0 +1,34 @@
+name: Double Rune proof
+on:
+  push:
+    branches: [main, foundation/ui-pilot-mvp]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  linux-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      CARGO_BUILD_JOBS: 4
+      XDG_RUNTIME_DIR: /tmp/double-rune-xdg
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: dtolnay/rust-toolchain@1.99.1
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: '. -> target/rune'
+      - run: sudo apt-get update && sudo apt-get install -y libxkbcommon-dev libwayland-dev mesa-vulkan-drivers
+      - run: mkdir -p "$XDG_RUNTIME_DIR" && chmod 700 "$XDG_RUNTIME_DIR"
+      - run: ./scripts/prove.sh
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: double-rune-linux-proof
+          path: .rune/
+          include-hidden-files: true
