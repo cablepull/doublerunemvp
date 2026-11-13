@@ -1,0 +1,14 @@
+{
+  "schema": "rune.plan/1",
+  "source_digest": "39f14ba01e83c7837d17a17cb9b8805fbb2dc09d3dc15d869a7a859aebcf8ffe",
+  "lock_digest": "f1487ea7910df83e42b77df5dbbe87cdc1690dccb0f3fd3415dafc7d04ccc1b8",
+  "toolchain": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\nbinary: rustc\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\ncommit-date: 2026-10-13\nhost: x86_64-unknown-linux-gnu\nrelease: 1.99.1\nLLVM version: 23.1.1",
+  "target": "x86_64-unknown-linux-gnu",
+  "policy": {
+    "max_usd": 2.0,
+    "max_tokens": 200000,
+    "max_seconds": 600,
+    "max_memory_mb": 64
+  },
+  "parent": "f7edd2578f670d5add623b416deaa4b5c39816ecb525981809c32f2ea95b2b1d"
+}

@@ -54,7 +54,7 @@ optimization demonstration**. Those can use this action/observation boundary lat
 - `vendor/anomaly-rune`: Anomaly Rune pinned as a git submodule, including required patches.
 - `fixtures/`: explicit actions and independent per-step postconditions.
 - `scripts/prove.sh`: reproducible build, positive and negative acceptance proof.
-- [Architecture and deployment](docs/FOUNDATION.md), [upstream provenance](docs/UPSTREAMS.md).
+- [Executed proof](docs/proof/README.md), [architecture and deployment](docs/FOUNDATION.md), [upstream provenance](docs/UPSTREAMS.md).
 
 The new UI adapter does not change ruvnet's statistical optimization evaluator or weaken
 its performance gates. UI correctness has its own acceptance command. No performance

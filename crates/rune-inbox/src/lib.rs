@@ -92,7 +92,10 @@ fn button(key: &str, title: &str, action: impl Fn(&mut State) + 'static) -> El {
         .center()
         .radius(8.0)
         .fill(t.control_off)
-        .on_press(action)
+        .on_press_tx(move |s, tx| {
+            action(s);
+            tx.instant();
+        })
         .child(text(title).font(type_::LABEL).color(t.text))
 }
 
@@ -112,7 +115,10 @@ pub fn view(s: &State, _: &mut Cx<State>) -> El {
             .gap(8.0)
             .radius(10.0)
             .fill(if selected { t.control_off } else { t.card })
-            .on_press(move |s: &mut State| s.select(id))
+            .on_press_tx(move |s: &mut State, tx| {
+                s.select(id);
+                tx.instant();
+            })
             .child(text(m.sender).font(type_::LABEL).color(muted))
             .child(text(m.subject).font(type_::BODY).color(t.text))
             .child(

@@ -1,0 +1,38 @@
+{
+  "schema": "double-rune.acceptance/1",
+  "status": "passed",
+  "checks": [
+    {
+      "check": "fixtures/archive.json",
+      "passed": true,
+      "evidence": ".rune/ui/archive-selected-message-509-1794555687301405581"
+    },
+    {
+      "check": "fixtures/reset.json",
+      "passed": true,
+      "evidence": ".rune/ui/archive-and-reset-630-1794555690642859073"
+    },
+    {
+      "check": "fixtures/reject-postcondition.json",
+      "passed": true,
+      "rejection": "rune: selected-subject: expected \"WRONG SUBJECT\", observed \"Friday demo\"; evidence: .rune/ui/reject-wrong-postcondition-776-1794555695333461916"
+    },
+    {
+      "check": "fixtures/reject-target.json",
+      "passed": true,
+      "rejection": "rune: action target does-not-exist missing or ambiguous; evidence: .rune/ui/reject-missing-target-837-1794555696701831151"
+    },
+    {
+      "check": "reject-tampered-executable",
+      "passed": true
+    },
+    {
+      "check": "reject-stale-source",
+      "passed": true
+    }
+  ],
+  "controller_sha256": "002f5d82253cb9edeae78113d78dc102e18d9ee0ed39bcee575b2e1a72f934dc",
+  "ui_sha256": "f277ff3cbec750b4f028215f87c090a503161b2123b59905a8d292b09e867bda",
+  "runtime": "native Linux x86-64; headless GPU rendering",
+  "model_calls": 0
+}

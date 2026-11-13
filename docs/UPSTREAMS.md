@@ -13,6 +13,8 @@ vendored crates; the focused MVP suite avoids claiming that optional Node, cross
 namespace-dependent and optimization studies were all executed.
 
 Integration modifications: root workspace/default members and Anomaly dependency patches;
+the Cargo adapter explicitly builds the whole workspace and selects the product declared
+in source-controlled workspace metadata (with two regression tests);
 `rune-toolchain` adds the `rune-ui` dependency, subcommand registration and command module;
 new `rune-toolchain-ui` and `rune-inbox` crates; proof fixtures, scripts and CI. No upstream
 performance, isolation or signing claims are extended to the new pilot by implication.

@@ -36,10 +36,12 @@ pub struct Artifact {
 /// Selects a workspace executable (or library) deterministically. Cargo message
 /// completion order is not stable across clean and cached workspace builds.
 pub fn build(workspace: &Path, target_dir: &Path, target: Option<&str>) -> Result<Artifact, Error> {
+    let product = workspace_product(workspace)?;
     let mut cmd = Command::new("cargo");
     cmd.current_dir(workspace)
         .args([
             "build",
+            "--workspace",
             "--release",
             "--locked",
             "--offline",
@@ -60,17 +62,64 @@ pub fn build(workspace: &Path, target_dir: &Path, target: Option<&str>) -> Resul
         )));
     }
     let canonical = std::fs::canonicalize(workspace).map_err(|e| Error::io(workspace, e))?;
-    let path = artifact_from_messages(&String::from_utf8_lossy(&out.stdout), Some(&canonical))
-        .ok_or_else(|| Error::Policy("cargo reported no build artifact".into()))?;
+    let path = artifact_for_product(
+        &String::from_utf8_lossy(&out.stdout),
+        Some(&canonical),
+        product.as_deref(),
+    )
+    .ok_or_else(|| Error::Policy("cargo reported no build artifact".into()))?;
     let digest = file_digest(&path)?;
     Ok(Artifact { path, digest })
 }
 
+/// Product identity is declared in source, so the frozen source digest binds it.
+fn workspace_product(workspace: &Path) -> Result<Option<String>, Error> {
+    let out = Command::new("cargo")
+        .current_dir(workspace)
+        .args([
+            "metadata",
+            "--format-version=1",
+            "--no-deps",
+            "--locked",
+            "--offline",
+        ])
+        .output()
+        .map_err(|e| Error::io("cargo metadata", e))?;
+    if !out.status.success() {
+        return Err(Error::Policy(format!(
+            "cargo metadata failed with {}",
+            out.status
+        )));
+    }
+    let metadata: serde_json::Value = serde_json::from_slice(&out.stdout)?;
+    match &metadata["metadata"]["rune"]["product"] {
+        serde_json::Value::Null => Ok(None),
+        serde_json::Value::String(name) if !name.is_empty() => Ok(Some(name.clone())),
+        _ => Err(Error::Policy(
+            "workspace.metadata.rune.product must be a nonempty string".into(),
+        )),
+    }
+}
+
+#[cfg(test)]
 fn artifact_from_messages(stdout: &str, workspace: Option<&Path>) -> Option<PathBuf> {
+    artifact_for_product(stdout, workspace, None)
+}
+
+fn artifact_for_product(
+    stdout: &str,
+    workspace: Option<&Path>,
+    product: Option<&str>,
+) -> Option<PathBuf> {
     stdout
         .lines()
         .filter_map(|l| serde_json::from_str::<serde_json::Value>(l).ok())
         .filter(|v| v["reason"] == "compiler-artifact")
+        .filter(|v| {
+            product.is_none_or(|name| {
+                v["target"]["name"].as_str() == Some(name) && v["executable"].is_string()
+            })
+        })
         .filter(|v| {
             workspace.is_none_or(|root| {
                 v["manifest_path"]
@@ -142,6 +191,25 @@ mod tests {
         assert_eq!(
             artifact_from_messages(s, Some(Path::new("/ws"))),
             Some(PathBuf::from("/t/app"))
+        );
+    }
+
+    #[test]
+    fn configured_product_wins_over_other_workspace_binaries() {
+        let messages = r#"{"reason":"compiler-artifact","manifest_path":"/ws/app/Cargo.toml","target":{"name":"rune-inbox","kind":["bin"]},"executable":"/t/rune-inbox","filenames":[]}
+{"reason":"compiler-artifact","manifest_path":"/ws/study/Cargo.toml","target":{"name":"rune-rank-study","kind":["bin"]},"executable":"/t/rune-rank-study","filenames":[]}"#;
+        assert_eq!(
+            artifact_for_product(messages, Some(Path::new("/ws")), Some("rune-inbox")),
+            Some(PathBuf::from("/t/rune-inbox"))
+        );
+    }
+
+    #[test]
+    fn missing_configured_product_does_not_fall_back_to_another_binary() {
+        let messages = r#"{"reason":"compiler-artifact","manifest_path":"/ws/study/Cargo.toml","target":{"name":"other","kind":["bin"]},"executable":"/t/other","filenames":[]}"#;
+        assert_eq!(
+            artifact_for_product(messages, Some(Path::new("/ws")), Some("rune-inbox")),
+            None
         );
     }
 }

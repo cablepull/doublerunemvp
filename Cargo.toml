@@ -9,6 +9,9 @@ members = [
 default-members = ["crates/rune-inbox"]
 exclude = ["vendor/anomaly-rune", "crates/rune-study"]
 
+[workspace.metadata.rune]
+product = "rune-inbox"
+
 [workspace.package]
 version = "0.3.0"
 edition = "2021"

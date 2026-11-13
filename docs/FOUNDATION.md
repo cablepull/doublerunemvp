@@ -38,10 +38,14 @@ apply budgets. This MVP does not call a model or assert that language planning w
 
 ## Build choices
 
-The root workspace includes the ruvnet toolchain and our app. Its default build product is
-the app, avoiding selection of another CLI binary when the original adapter chooses one
-workspace artifact. `cargo build --workspace` builds everything; `rune build` builds the
-default application. Required Anomaly patches are applied at the root workspace.
+The root workspace includes the ruvnet toolchain and our app. Its default Cargo product is
+the app. The approved-build adapter explicitly uses `--workspace`, so `rune build` builds
+both together with the same unified dependency features as the bootstrap build. This avoids
+an otherwise redundant renderer rebuild caused by workspace versus app-only feature
+resolution. `workspace.metadata.rune.product` explicitly selects `rune-inbox`, and the
+frozen source digest binds that configuration. A missing configured product is a build
+failure, and the pilot independently rejects any other product. Required Anomaly patches
+are applied at the root workspace.
 
 The UI enables `tooling` explicitly in release builds. No upstream Anomaly source was
 modified. The compiler and dependencies are pinned. Initial dependency acquisition is

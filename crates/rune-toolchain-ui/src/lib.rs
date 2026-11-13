@@ -110,7 +110,7 @@ pub fn pilot(
         record(&mut report, &output, 0, None, scenario.initial.len())?;
         for (index, step) in scenario.steps.iter().enumerate() {
             model::action_target(&tree, &step.tap)?;
-            events.push(json!({"t": (index + 1) as f64 * 0.4,
+            events.push(json!({"t": (index + 1) as f64,
                 "type": "tap", "key": step.tap, "hold": 0.04}));
             tree = observe(
                 &artifact,
@@ -172,7 +172,7 @@ fn observe(
         serde_json::to_vec(&json!({"events": events})).map_err(|e| e.to_string())?,
     )
     .map_err(|e| e.to_string())?;
-    let at = events.last().and_then(|v| v["t"].as_f64()).unwrap_or(0.0) + 0.3;
+    let at = events.last().and_then(|v| v["t"].as_f64()).unwrap_or(0.0) + 0.8;
     let args = vec![
         "--script".into(),
         script.display().to_string(),
